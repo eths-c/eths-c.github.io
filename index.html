@@ -30,24 +30,20 @@
         .project { 
             background-color: #1e293b;
             border: 1px solid #334155; 
-            padding: 5px 20px 20px 20px; 
-            margin-bottom: 15px; 
+            padding: 20px; 
+            margin-bottom: 20px; 
             border-radius: 8px; 
             transition: border-color 0.2s ease;
         }
         .project:hover {
             border-color: #38bdf8;
         }
-        summary {
+        .project-title {
             font-size: 1.25rem;
             font-weight: bold;
             color: #f8fafc;
-            cursor: pointer;
-            padding: 15px 0;
-            outline: none;
-        }
-        summary:hover {
-            color: #38bdf8;
+            margin-top: 0;
+            margin-bottom: 10px;
         }
         .tech-tag {
             display: inline-block;
@@ -58,6 +54,21 @@
             font-size: 0.85rem;
             border: 1px solid #334155;
             margin-top: 10px;
+            margin-right: 5px;
+        }
+        details {
+            margin-top: 15px;
+            border-top: 1px solid #334155;
+            padding-top: 15px;
+        }
+        summary {
+            color: #38bdf8;
+            cursor: pointer;
+            font-weight: bold;
+            outline: none;
+        }
+        summary:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -67,25 +78,57 @@
     
     <h2>Featured Projects</h2>
     
-    <details class="project" open>
-    <summary>Guitar Chord Recognition Tool</summary>
-    <p>This is a desktop application created using Python that listens to a live microphone input, recognises a supported set of guitar chords and outputs the correct chord though an interface. This is achieved using background threading and queue-based communication to keep the interface responsive during the audio analysis.</p>
-    <div class="tech-tag">Python</div> 
-    <div class="tech-tag">Librosa</div> 
-    <div class="tech-tag">Tkinter</div>
-    
-    <!-- Links section added here -->
-    <div style="margin-top: 15px; padding-top: 10px; border-top: 1px solid #334155;">
-        <a href="https://github.com/eths-c/YOUR-REPO-NAME-HERE" target="_blank" style="color: #38bdf8; text-decoration: none; font-size: 0.9rem; font-weight: bold;">
-            View Source Code on GitHub &rarr;
-        </a>
+    <!-- Project 1 -->
+    <div class="project">
+        <h3 class="project-title">Guitar Chord Recognition Tool</h3>
+        <p>This is a desktop application created using Python that listens to a live microphone input, recognises a supported set of guitar chords and outputs the correct chord though an interface. This is achieved using background threading and queue-based communication to keep the interface responsive during the audio analysis.</p>
+        <div>
+            <div class="tech-tag">NumPy</div> 
+            <div class="tech-tag">PyAudio</div> 
+            <div class="tech-tag">Librosa</div> 
+            <div class="tech-tag">Tkinter</div>
+            <div class="tech-tag">Chromagram</div>
+        </div>
+        
+        <!-- Dropdown for extra details and code link -->
+        <details>
+            <summary>Click here for how it works, screenshots & source code</summary>
+            <div style="margin-top: 15px;">
+                <p><strong>how it works:</strong></p>
+                <p>add text here...</p>
+                
+                <div style="margin-top: 15px; padding-top: 10px; border-top: 1px dashed #334155;">
+                    <a href="https://github.com/eths-c/YOUR-REPO-NAME-HERE" target="_blank" style="color: #38bdf8; text-decoration: none; font-size: 0.9rem; font-weight: bold;">
+                        View Source Code Here! &rarr;
+                    </a>
+                </div>
+            </div>
+        </details>
     </div>
-</details>
 
-    <details class="project">
-        <summary>Physics Simulation</summary>
+    <!-- Project 2 (Example template) -->
+    <div class="project">
+        <h3 class="project-title">Physics Simulation</h3>
         <p>Short description of your second module/project.</p>
-        <div class="tech-tag">JavaScript, HTML, CSS</div>
-    </details>
+        <div>
+            <div class="tech-tag">JavaScript</div>
+            <div class="tech-tag">HTML</div>
+            <div class="tech-tag">CSS</div>
+        </div>
+        
+        <details>
+            <summary>Click here for how it works, screenshots & source code</summary>
+            <div style="margin-top: 15px;">
+                <p><strong>how it works:</strong></p>
+                <p>add text here...</p>
+                
+                <div style="margin-top: 15px; padding-top: 10px; border-top: 1px dashed #334155;">
+                    <a href="https://github.com/eths-c/YOUR-REPO-NAME-HERE" target="_blank" style="color: #38bdf8; text-decoration: none; font-size: 0.9rem; font-weight: bold;">
+                        View Source Code Here! &rarr;
+                    </a>
+                </div>
+            </div>
+        </details>
+    </div>
 </body>
 </html>
