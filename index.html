@@ -91,20 +91,20 @@
         </div>
         
         <!-- Dropdown for extra details and code link -->
-        <details>
-            <summary>Click here for how it works, screenshots & source code</summary>
-            <div style="margin-top: 15px;">
-                <p><strong>how it works:</strong></p>
-                <p>add text here...</p>
-                
-                <div style="margin-top: 15px; padding-top: 10px; border-top: 1px dashed #334155;">
-                    <a href="https://github.com/eths-c/YOUR-REPO-NAME-HERE" target="_blank" style="color: #38bdf8; text-decoration: none; font-size: 0.9rem; font-weight: bold;">
-                        View Source Code Here! &rarr;
-                    </a>
-                </div>
+        <span class="expand-hint">Click to expand</span>
+        
+        <!-- Dropdown hidden content -->
+        <div style="margin-top: 15px; border-top: 1px dashed #334155; padding-top: 15px;" onclick="event.stopPropagation()">
+            <p><strong>how it works:</strong></p>
+            <p>add text here...</p>
+            
+            <div style="margin-top: 15px; padding-top: 10px;">
+                <a href="https://github.com/eths-c/YOUR-REPO-NAME-HERE" target="_blank" style="color: #38bdf8; text-decoration: none; font-size: 0.9rem; font-weight: bold;">
+                    View Source Code Here! &rarr;
+                </a>
             </div>
-        </details>
-    </div>
+        </div>
+    </details>
 
     <!-- Project 2 (Example template) -->
     <div class="project">
