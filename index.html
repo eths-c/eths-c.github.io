@@ -27,6 +27,7 @@
             border-bottom: 2px solid #1e293b;
             padding-bottom: 8px;
         }
+        /* The details tag acts as the container card now */
         .project { 
             background-color: #1e293b;
             border: 1px solid #334155; 
@@ -34,6 +35,7 @@
             margin-bottom: 20px; 
             border-radius: 8px; 
             transition: border-color 0.2s ease;
+            cursor: pointer; /* Changes mouse to pointer anywhere on the box */
         }
         .project:hover {
             border-color: #38bdf8;
@@ -44,6 +46,7 @@
             color: #f8fafc;
             margin-top: 0;
             margin-bottom: 10px;
+            display: inline-block;
         }
         .tech-tag {
             display: inline-block;
@@ -56,19 +59,20 @@
             margin-top: 10px;
             margin-right: 5px;
         }
-        details {
-            margin-top: 15px;
-            border-top: 1px solid #334155;
-            padding-top: 15px;
-        }
+        /* Summary styles the title area */
         summary {
-            color: #38bdf8;
-            cursor: pointer;
-            font-weight: bold;
             outline: none;
+            list-style: none; /* Hides the default arrow if you want it cleaner, or keep it */
         }
-        summary:hover {
-            text-decoration: underline;
+        /* Hides the default bullet arrow completely */
+        summary::-webkit-details-marker {
+            display: none;
+        }
+        .expand-hint {
+            font-size: 0.85rem;
+            color: #38bdf8;
+            margin-top: 15px;
+            display: block;
         }
     </style>
 </head>
@@ -79,8 +83,11 @@
     <h2>Featured Projects</h2>
     
     <!-- Project 1 -->
-    <div class="project">
-        <h3 class="project-title">Guitar Chord Recognition Tool</h3>
+    <details class="project" open>
+        <summary>
+            <h3 class="project-title">Guitar Chord Recognition Tool</h3>
+        </summary>
+        
         <p>This is a desktop application created using Python that listens to a live microphone input, recognises a supported set of guitar chords and outputs the correct chord though an interface. This is achieved using background threading and queue-based communication to keep the interface responsive during the audio analysis.</p>
         <div>
             <div class="tech-tag">NumPy</div> 
@@ -89,9 +96,8 @@
             <div class="tech-tag">Tkinter</div>
             <div class="tech-tag">Chromagram</div>
         </div>
-        
-        <!-- Dropdown for extra details and code link -->
-        <span class="expand-hint">Click to expand</span>
+
+        <span class="expand-hint">▼ Click anywhere to collapse/expand extra details</span>
         
         <!-- Dropdown hidden content -->
         <div style="margin-top: 15px; border-top: 1px dashed #334155; padding-top: 15px;" onclick="event.stopPropagation()">
@@ -107,28 +113,30 @@
     </details>
 
     <!-- Project 2 (Example template) -->
-    <div class="project">
-        <h3 class="project-title">Physics Simulation</h3>
+    <details class="project">
+        <summary>
+            <h3 class="project-title">Physics Simulation</h3>
+        </summary>
+        
         <p>Short description of your second module/project.</p>
         <div>
             <div class="tech-tag">JavaScript</div>
             <div class="tech-tag">HTML</div>
             <div class="tech-tag">CSS</div>
         </div>
+
+        <span class="expand-hint">▼ Click anywhere to expand extra details</span>
         
-        <details>
-            <summary>Click here for how it works, screenshots & source code</summary>
-            <div style="margin-top: 15px;">
-                <p><strong>how it works:</strong></p>
-                <p>add text here...</p>
-                
-                <div style="margin-top: 15px; padding-top: 10px; border-top: 1px dashed #334155;">
-                    <a href="https://github.com/eths-c/YOUR-REPO-NAME-HERE" target="_blank" style="color: #38bdf8; text-decoration: none; font-size: 0.9rem; font-weight: bold;">
-                        View Source Code Here! &rarr;
-                    </a>
-                </div>
+        <div style="margin-top: 15px; border-top: 1px dashed #334155; padding-top: 15px;" onclick="event.stopPropagation()">
+            <p><strong>how it works:</strong></p>
+            <p>add text here...</p>
+            
+            <div style="margin-top: 15px; padding-top: 10px;">
+                <a href="https://github.com/eths-c/YOUR-REPO-NAME-HERE" target="_blank" style="color: #38bdf8; text-decoration: none; font-size: 0.9rem; font-weight: bold;">
+                    View Source Code Here! &rarr;
+                </a>
             </div>
-        </details>
-    </div>
+        </div>
+    </details>
 </body>
 </html>
