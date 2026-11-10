@@ -104,12 +104,10 @@
             <p>The application records live guitar audio through a microphone using PyAudio. The microphone sends raw data to the program in short repeated chunks. This allows the system to analyse incoming sound constantly instead of waiting for a full recording to finish.</p>
             <p>The raw data is converted into numerical audio samples using NumPy. These samples represent the changing shape of the sound wave over time and allow the program to process the audio mathematically. The application also calculates a peak-frequency estimate, which is shown to the user as additional live feedback feature.</p>
             <p>The numerical samples are analysed using the librosa library to generate a chromagram. A chromagram represents the strength of the twelve pitch classes in the audio signal: C, C#, D, D#, E, F, F#, G, G#, A, A#, and B. This is useful because a chord is defined by a combination of note classes rather than one individual frequency.</p>
-
             
-            <!-- PASTE YOUR IMAGE CODE HERE -->
             <div style="margin-top: 20px; text-align: center;">
                 <p style="font-size: 0.85rem; color: #94a3b8; margin-top: 5px;">Figure 1: Main interface upon launching the software.</p>
-               <img src="dissgui1.png" alt="Guitar Chord Recognition Interface" style="width: 100%; max-width: 600px; border-radius: 6px; border: 1px solid #334155;">
+                <img src="dissgui1.png" alt="Guitar Chord Recognition Interface" style="width: 100%; max-width: 600px; border-radius: 6px; border: 1px solid #334155;">
                 <p style="font-size: 0.85rem; color: #94a3b8; margin-top: 5px;">Figure 2: Live interface of the software in action.</p>
                 <img src="dissgui2.png" alt="Guitar Chord Recognition Interface test" style="width: 100%; max-width: 600px; border-radius: 6px; border: 1px solid #334155;">
             </div>
@@ -122,11 +120,11 @@
         </div>
     </details>
 
-    <!-- Project 2 (Example template) -->
+    <!-- Project 2: Physics Simulation -->
     <details class="project">
         <summary>
             <h3 class="project-title">Physics Simulation</h3>
-            <p>This PhysX simulation recreates a simple soap box racing ramp. </p>
+            <p>This PhysX simulation recreates a simple soap box racing ramp.</p>
             <div>
                 <div class="tech-tag">C++</div>
                 <div class="tech-tag">PhysX</div>
@@ -142,39 +140,13 @@
             <p>This is a project created with C++ that demonstrates simple physics of a box car crashing into hay bales from the speed of a ramp. The course, guide rails and finish area use static rigid bodies, while the car and each hay bale use individual dynamic rigid bodies. PhysX calculates gravity, friction, momentum and collision responses in real time, allowing the car to travel down the ramp without any engine or direct movement forces.</p>
             <p>A kinematic start gate holds the car before release, then moves out of the way to begin the run. At the finish line, the car collides with a stacked barrier of separate hay bale bodies. Because every bale has its own mass, material and collision behaviour, the structure shifts and collapses naturally from the impact rather than using a pre-made animation.</p>
             
-            <div style="margin-top: 15px;">
-                <a href="https://github.com/eths-c/YOUR-REPO-NAME-HERE" target="_blank" style="color: #38bdf8; text-decoration: none; font-size: 0.9rem; font-weight: bold;">
-                    View Source Code Here! &rarr;
-                </a>
-            </div>
-        </div>
-    </details>
-</body>
-</html>
-
-    <!-- Project 3 -->
-    <details class="project">
-        <summary>
-            <h3 class="project-title">Artificial Intelligence</h3>
-            <p>Short description of your third module/project.</p>
-            <div>
-                <div class="tech-tag">JavaScript</div>
-                <div class="tech-tag">HTML</div>
-                <div class="tech-tag">CSS</div>
-            </div>
-            <span class="expand-hint">Click to expand!</span>
-        </summary>
-        
-        <div class="hidden-content" onclick="event.stopPropagation()">
-            <p><strong>how it works:</strong></p>
-            <p>add text here...</p>
-
+            <!-- Video added here -->
             <div style="margin-top: 20px; text-align: center;">
                 <video autoplay loop muted playsinline style="width: 100%; max-width: 550px; border-radius: 6px; border: 1px solid #334155; display: block; margin: 0 auto;">
                     <source src="ramp1.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <p style="font-size: 0.85rem; color: #94a3b8; margin-top: 5px;">Figure 3: Live video demonstration of chord detection.</p>
+                <p style="font-size: 0.85rem; color: #94a3b8; margin-top: 5px;">Figure 1: Soap box car simulation running down the ramp and impacting the hay bales.</p>
             </div>
             
             <div style="margin-top: 15px;">
