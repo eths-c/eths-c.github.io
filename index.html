@@ -156,5 +156,42 @@
             </div>
         </div>
     </details>
+
+    <!-- Project 3 -->
+    <details class="project">
+        <summary>
+            <h3 class="project-title">Artifical Intelligence</h3>
+            <p>This is a desktop application created using Python that listens to a live microphone input, recognises a supported set of guitar chords and outputs the correct chord though an interface. This is achieved using background threading and queue-based communication to keep the interface responsive during the audio analysis.</p>
+            <div>
+                <div class="tech-tag">NumPy</div> 
+                <div class="tech-tag">PyAudio</div> 
+                <div class="tech-tag">Librosa</div> 
+                <div class="tech-tag">Tkinter</div>
+                <div class="tech-tag">Chromagram</div>
+            </div>
+            <span class="expand-hint">Click to expand!</span>
+        </summary>
+        
+        <!-- Expanded Content (Hidden until clicked) -->
+        <div class="hidden-content" onclick="event.stopPropagation()">
+            <p><strong>How it works:</strong></p>
+            <p>The application records live guitar audio through a microphone using PyAudio. The microphone sends raw data to the program in short repeated chunks. This allows the system to analyse incoming sound constantly instead of waiting for a full recording to finish.</p>
+            <p>The raw data is converted into numerical audio samples using NumPy. These samples represent the changing shape of the sound wave over time and allow the program to process the audio mathematically. The application also calculates a peak-frequency estimate, which is shown to the user as additional live feedback feature.</p>
+            <p>The numerical samples are analysed using the librosa library to generate a chromagram. A chromagram represents the strength of the twelve pitch classes in the audio signal: C, C#, D, D#, E, F, F#, G, G#, A, A#, and B. This is useful because a chord is defined by a combination of note classes rather than one individual frequency.</p>
+            
+            <div style="margin-top: 20px; text-align: center;">
+                <p style="font-size: 0.85rem; color: #94a3b8; margin-top: 5px;">Figure 1: Main interface upon launching the software.</p>
+                <img src="dissgui1.png" alt="Guitar Chord Recognition Interface" style="width: 100%; max-width: 600px; border-radius: 6px; border: 1px solid #334155;">
+                <p style="font-size: 0.85rem; color: #94a3b8; margin-top: 5px;">Figure 2: Live interface of the software in action.</p>
+                <img src="dissgui2.png" alt="Guitar Chord Recognition Interface test" style="width: 100%; max-width: 600px; border-radius: 6px; border: 1px solid #334155;">
+            </div>
+            
+            <div style="margin-top: 15px;">
+                <a href="https://github.com/eths-c/YOUR-REPO-NAME-HERE" target="_blank" style="color: #38bdf8; text-decoration: none; font-size: 0.9rem; font-weight: bold;">
+                    View Source Code Here! &rarr;
+                </a>
+            </div>
+        </div>
+    </details>
 </body>
 </html>
