@@ -139,8 +139,8 @@
         
         <div class="hidden-content" onclick="event.stopPropagation()">
             <p><strong>How it works:</strong></p>
-            <p>A box-shaped soap box car starts at the top of a downhill ramp behind a release gate. Once released, it moves entirely through gravity and contact with the course with no engine or direct force applied. Guide rails keep the car on the track, while a marked finish area shows the end of the run.</p>
-            <p>At the finish line, the car crashes into a safety barrier made from individual simulated hay bales. Each bale has its own rigid body and collision settings, which allows the barrier to move, topple and collapse naturally when struck by an object. The simulation also includes camera controls, pause/reset options, and a HUD showing the available controls.</p>
+            <p>This is a project created with C++ that demonstrates simple physics of a box car crashing into hay bales from the speed of a ramp. The course, guide rails and finish area use static rigid bodies, while the car and each hay bale use individual dynamic rigid bodies. PhysX calculates gravity, friction, momentum and collision responses in real time, allowing the car to travel down the ramp without any engine or direct movement forces.</p>
+            <p>A kinematic start gate holds the car before release, then moves out of the way to begin the run. At the finish line, the car collides with a stacked barrier of separate hay bale bodies. Because every bale has its own mass, material and collision behaviour, the structure shifts and collapses naturally from the impact rather than using a pre-made animation.</p>
             
             <div style="margin-top: 15px;">
                 <a href="https://github.com/eths-c/YOUR-REPO-NAME-HERE" target="_blank" style="color: #38bdf8; text-decoration: none; font-size: 0.9rem; font-weight: bold;">
