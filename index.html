@@ -169,7 +169,7 @@
     <details class="project">
         <summary>
             <h3 class="project-title">Artifical Intelligence</h3>
-            <p>This is a desktop application created using Python that listens to a live microphone input, recognises a supported set of guitar chords and outputs the correct chord though an interface. This is achieved using background threading and queue-based communication to keep the interface responsive during the audio analysis.</p>
+            <p>This is a classic Wumpus game re-created using Python. The system utilises the A* search algorithm to dynamically navigate characters across varying grid configurations, successfully guiding the player to collect gold while avoiding hazards like pits and Wumpuses.</p>
             <div>
                 <div class="tech-tag">NumPy</div> 
                 <div class="tech-tag">PyAudio</div> 
@@ -183,9 +183,10 @@
         <!-- Expanded Content (Hidden until clicked) -->
         <div class="hidden-content" onclick="event.stopPropagation()">
             <p><strong>How it works:</strong></p>
-            <p>The application records live guitar audio through a microphone using PyAudio. The microphone sends raw data to the program in short repeated chunks. This allows the system to analyse incoming sound constantly instead of waiting for a full recording to finish.</p>
-            <p>The raw data is converted into numerical audio samples using NumPy. These samples represent the changing shape of the sound wave over time and allow the program to process the audio mathematically. The application also calculates a peak-frequency estimate, which is shown to the user as additional live feedback feature.</p>
-            <p>The numerical samples are analysed using the librosa library to generate a chromagram. A chromagram represents the strength of the twelve pitch classes in the audio signal: C, C#, D, D#, E, F, F#, G, G#, A, A#, and B. This is useful because a chord is defined by a combination of note classes rather than one individual frequency.</p>
+            <p>The core engine implements the A* search algorithm paired with the Manhattan distance heuristic to evaluate movement costs and calculate the most optimal, lowest cost paths through the graph space, efficiently managing high branching factors.</p>
+            <p>The algorithm continuously re-evaluates the grid, processing the positions of obstacles in real time, pits, and opposing characters to ensure the player chooses safe routes rather than navigating into danger.</p>
+            <p>Built with modular, reusable logic that adapts to both static game configurations and unpredictable, fully dynamic environments across varying grid sizes (from standard 4x4 boards up to larger 12x12 setups).</p>
+   
             
             <div style="margin-top: 20px; text-align: center;">
                 <p style="font-size: 0.85rem; color: #94a3b8; margin-top: 5px;">Figure 1: Main interface upon launching the software.</p>
