@@ -95,3 +95,18 @@ summary::-webkit-details-marker {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* Custom Dark Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #050505;
+}
+::-webkit-scrollbar-thumb {
+    background: #1f1f2e;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #38bdf8; /* Glows blue when dragging */
+}
