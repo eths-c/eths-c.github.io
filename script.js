@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const observerOptions = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.1 // % of when block is visable
+        threshold: 0.05 // % of when block is visable
     };
 
     const observer = new IntersectionObserver((entries, observerInstance) => {
