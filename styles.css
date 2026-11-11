@@ -5,8 +5,23 @@ body {
     padding: 0 20px; 
     line-height: 1.6; 
     color: #e2e8f0; 
-    /* Upgraded to a deeper, darker obsidian palette */
     background-color: #050505; 
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Adds a soft ambient glow behind your header */
+body::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.07) 0%, rgba(5, 5, 5, 0) 70%);
+    z-index: -1;
+    pointer-events: none;
 }
 
 h1 { 
@@ -31,12 +46,13 @@ h2 {
     padding: 20px; 
     margin-bottom: 20px; 
     border-radius: 8px; 
-    transition: border-color 0.25s ease, transform 0.25s ease;
+    transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .project:hover {
     border-color: #38bdf8;
     transform: translateY(-2px);
+    box-shadow: 0 10px 30px -10px rgba(56, 189, 248, 0.15);
 }
 
 summary {
@@ -96,7 +112,7 @@ summary::-webkit-details-marker {
     transform: translateY(0);
 }
 
-/* Custom Dark Scrollbar */
+/* --- Custom Sleek Scrollbar --- */
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -108,5 +124,5 @@ summary::-webkit-details-marker {
     border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: #38bdf8; /* Glows blue when dragging */
+    background: #38bdf8;
 }
