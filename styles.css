@@ -1,1 +1,97 @@
+body { 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+    max-width: 800px; 
+    margin: 60px auto; 
+    padding: 0 20px; 
+    line-height: 1.6; 
+    color: #e2e8f0; 
+    /* Upgraded to a deeper, darker obsidian palette */
+    background-color: #050505; 
+}
 
+h1 { 
+    color: #38bdf8; 
+    margin-bottom: 5px; 
+}
+
+p {
+    color: #94a3b8;
+}
+
+h2 {
+    margin-top: 40px;
+    color: #f8fafc;
+    border-bottom: 2px solid #16161f;
+    padding-bottom: 8px;
+}
+
+.project { 
+    background-color: #0d0d12;
+    border: 1px solid #1f1f2e; 
+    padding: 20px; 
+    margin-bottom: 20px; 
+    border-radius: 8px; 
+    transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.project:hover {
+    border-color: #38bdf8;
+    transform: translateY(-2px);
+}
+
+summary {
+    cursor: pointer;
+    outline: none;
+}
+
+/* Hides the default bullet arrow */
+summary::-webkit-details-marker {
+    display: none;
+}
+
+.project-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #f8fafc;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.tech-tag {
+    display: inline-block;
+    background-color: #050505;
+    color: #38bdf8;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    border: 1px solid #1f1f2e;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+.expand-hint {
+    font-size: 0.85rem;
+    color: #38bdf8;
+    margin-top: 15px;
+    display: block;
+}
+
+.hidden-content {
+    margin-top: 20px; 
+    border-top: 1px dashed #1f1f2e; 
+    padding-top: 15px;
+}
+
+/* --- Scroll-Reveal Block-by-Block Animation Styles --- */
+.reveal-block {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+.reveal-block.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
