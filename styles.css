@@ -10,7 +10,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Adds a soft ambient glow behind your header */
+/* header glow */
 body::before {
     content: '';
     position: absolute;
@@ -60,7 +60,7 @@ summary {
     outline: none;
 }
 
-/* Hides the default bullet arrow */
+/* default arrow */
 summary::-webkit-details-marker {
     display: none;
 }
@@ -98,7 +98,7 @@ summary::-webkit-details-marker {
     padding-top: 15px;
 }
 
-/* --- Scroll-Reveal Block-by-Block Animation Styles --- */
+/* custom scroller */
 .reveal-block {
     opacity: 0;
     transform: translateY(25px);
@@ -112,7 +112,7 @@ summary::-webkit-details-marker {
     transform: translateY(0);
 }
 
-/* --- Custom Sleek Scrollbar --- */
+/* customer scrollbar */
 ::-webkit-scrollbar {
     width: 8px;
 }
